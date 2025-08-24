@@ -1,0 +1,13 @@
+.header {
+    position: relative;
+    overflow: hidden;
+
+    &__pattern {
+        display: none;
+    }
+
+    &__bg-image {
+        position: absolute;
+        left: 50%;
+    }
+}
