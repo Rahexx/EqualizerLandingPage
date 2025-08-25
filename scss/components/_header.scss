@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as m;
 
 .header {
     padding: $spacing-5xl $spacing-md;
@@ -16,24 +17,18 @@
     }
 
     &__logo {
-        display: inline-block;
+        @include m.sized-inline(auto, auto);
         margin-bottom: $spacing-5xl;
     }
 
     &__title {
         width: 20.938rem;
         margin-bottom: $spacing-2xl;
-        color: $color-slate;
-        font-size: $font-size-2xl;
-        font-weight: $font-bold;
-        line-height: $line-height-base;
+        @include m.text($font-size-2xl, $line-height-base, $font-bold, $color-slate);
         letter-spacing: -0.063rem;
     }
 
-
     &__description {
-        color: $color-slate;
-        font-size: $font-size-base;
-        line-height: $line-height-normal;
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
     }
 }
