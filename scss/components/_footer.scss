@@ -1,0 +1,32 @@
+@use '../utils/variables' as *;
+
+.footer {
+    margin: $spacing-5xl $spacing-md $spacing-6xl;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    &__logo {
+        display: inline-block;
+        height: 2.063rem;
+        width: 9.188rem;
+    }
+
+    &__rights, &__contact {
+        color: $color-slate;
+        font-size: $font-size-base;
+        line-height: $line-height-normal;
+    }
+    &__mail {
+        display: block;
+        color: $color-slate;
+        font-size: $font-size-base;
+        font-weight: $font-bold;
+        line-height: $line-height-normal;
+    }
+
+    &__social {
+        display: flex;
+        gap: $spacing-xl
+    }
+}
