@@ -1,4 +1,7 @@
+@use '../utils/variables' as *;
+
 .header {
+    padding: $spacing-5xl $spacing-md;
     position: relative;
     overflow: hidden;
 
@@ -8,6 +11,29 @@
 
     &__bg-image {
         position: absolute;
-        left: 50%;
+        top: -6rem;
+        left: 7rem;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: $spacing-5xl;
+    }
+
+    &__title {
+        width: 20.938rem;
+        margin-bottom: $spacing-2xl;
+        color: $color-slate;
+        font-size: $font-size-2xl;
+        font-weight: $font-bold;
+        line-height: $line-height-base;
+        letter-spacing: -0.063rem;
+    }
+
+
+    &__description {
+        color: $color-slate;
+        font-size: $font-size-base;
+        line-height: $line-height-normal;
     }
 }
