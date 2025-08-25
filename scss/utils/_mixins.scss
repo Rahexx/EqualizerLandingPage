@@ -1,0 +1,33 @@
+@use './variables' as *;
+
+// Typography helper
+@mixin text($size: $font-size-base, $lh: $line-height-normal, $weight: null, $color: null) {
+    font-size: $size;
+    line-height: $lh;
+    @if $weight != null { font-weight: $weight; }
+    @if $color != null { color: $color; }
+}
+
+// Flex helpers
+@mixin flex-row($gap: 0, $align: stretch, $justify: flex-start) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin flex-column($gap: 0, $align: stretch, $justify: flex-start) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+// Sized inline block (for logos/icons)
+@mixin sized-inline($w, $h) {
+    display: inline-block;
+    width: $w;
+    height: $h;
+}

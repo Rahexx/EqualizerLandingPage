@@ -1,32 +1,24 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as m;
 
 .footer {
     margin: $spacing-5xl $spacing-md $spacing-6xl;
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-xl;
+    @include m.flex-column($spacing-xl);
 
     &__logo {
-        display: inline-block;
-        height: 2.063rem;
-        width: 9.188rem;
+        @include m.sized-inline(9.188rem, 2.063rem);
     }
 
     &__rights, &__contact {
-        color: $color-slate;
-        font-size: $font-size-base;
-        line-height: $line-height-normal;
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
     }
+
     &__mail {
         display: block;
-        color: $color-slate;
-        font-size: $font-size-base;
-        font-weight: $font-bold;
-        line-height: $line-height-normal;
+        @include m.text($font-size-base, $line-height-normal, $font-bold, $color-slate);
     }
 
     &__social {
-        display: flex;
-        gap: $spacing-xl
+        @include m.flex-row($spacing-xl);
     }
 }
