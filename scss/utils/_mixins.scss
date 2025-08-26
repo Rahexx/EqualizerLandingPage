@@ -25,9 +25,29 @@
     gap: $gap;
 }
 
+// Common centered row
+@mixin flex-center-row($gap: 0) {
+    @include flex-row($gap, center, center);
+}
+
 // Sized inline block (for logos/icons)
 @mixin sized-inline($w, $h) {
     display: inline-block;
     width: $w;
     height: $h;
+}
+
+// Absolute positioning helper
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+    position: absolute;
+    @if $top != null { top: $top; }
+    @if $right != null { right: $right; }
+    @if $bottom != null { bottom: $bottom; }
+    @if $left != null { left: $left; }
+}
+
+// Center horizontally via transform
+@mixin center-x() {
+    left: 50%;
+    transform: translateX(-50%);
 }

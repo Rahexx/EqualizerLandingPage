@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as m;
 
 .card {
     height: 39.063rem;
@@ -7,42 +8,28 @@
     background: $color-orange;
 
     &__title {
-        font-weight: $font-bold;
-        font-size: $font-size-2xl; // 40px
-        line-height: $line-height-tight; // 110%
-        color: $color-slate;
+        @include m.text($font-size-2xl, $line-height-tight, $font-bold, $color-slate);
     }
 
     &__description {
         margin: $spacing-lg 0 $spacing-2xl;;
-        color: $color-slate;
-        font-size: $font-size-base; // 16px
-        line-height: $line-height-normal; // 150%
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
     }
 
     &__price {
-        display: flex;
-        align-items: center;
-        gap: $spacing-sm;
+        @include m.flex-row($spacing-sm, center, flex-start);
         margin-bottom: $spacing-3xl;
-        font-size: $font-size-xl; // 20px
-        line-height: $line-height-normal; // 150%
-        color: $color-slate;
+        @include m.text($font-size-xl, $line-height-normal, null, $color-slate);
 
         &--highlight {
-            font-weight: $font-bold;
-            font-size: $font-size-3xl; // 64px
-            line-height: $line-height-tight; // 110%
+            @include m.text($font-size-3xl, $line-height-tight, $font-bold, null);
         }
     }
 
     &__btn {
         height: 4rem; // 64px
         width: 20.9375rem; // 335px
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: $spacing-xs;
+        @include m.flex-center-row($spacing-xs);
         font-weight: $font-bold;
         font-size: $font-size-lg; // 18px
         border-radius: 0.75rem;
