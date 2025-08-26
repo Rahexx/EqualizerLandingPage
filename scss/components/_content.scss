@@ -1,0 +1,33 @@
+@use '../utils/variables' as *;
+
+.content {
+    position: relative;
+    height: 62.8125rem; // 1005px
+    width: 23.4375rem; // 375px
+    margin: $spacing-7xl 0 0 0;
+    background: $color-slate;
+
+    &__phone {
+        position: absolute;
+        top: calc($spacing-7xl  * -1);
+        left: 50%;
+        display: inline-block;
+        height: 26.875rem; // 430px
+        width: 13.0606rem; // 208.97px
+        transform: translateX(-50%);
+        z-index: 2;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    &__card {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
