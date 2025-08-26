@@ -1,0 +1,61 @@
+@use '../utils/variables' as *;
+
+.card {
+    height: 39.063rem;
+    width: 23.438rem;
+    padding: $spacing-3xl $spacing-md 0;
+    background: $color-orange;
+
+    &__title {
+        font-weight: $font-bold;
+        font-size: $font-size-2xl; // 40px
+        line-height: $line-height-tight; // 110%
+        color: $color-slate;
+    }
+
+    &__description {
+        margin: $spacing-lg 0 $spacing-2xl;;
+        color: $color-slate;
+        font-size: $font-size-base; // 16px
+        line-height: $line-height-normal; // 150%
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-3xl;
+        font-size: $font-size-xl; // 20px
+        line-height: $line-height-normal; // 150%
+        color: $color-slate;
+
+        &--highlight {
+            font-weight: $font-bold;
+            font-size: $font-size-3xl; // 64px
+            line-height: $line-height-tight; // 110%
+        }
+    }
+
+    &__btn {
+        height: 4rem; // 64px
+        width: 20.9375rem; // 335px
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $spacing-xs;
+        font-weight: $font-bold;
+        font-size: $font-size-lg; // 18px
+        border-radius: 0.75rem;
+
+        &--ios {
+            background: $color-slate;
+            color: $color-white;
+        }
+
+        &--android {
+            margin-top: $spacing-sm;
+            background: $color-white;
+            color: $color-slate;
+        }
+    }
+}
