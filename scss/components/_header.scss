@@ -13,7 +13,9 @@
     &__bg-image {
         position: absolute;
         top: -6rem;
-        left: 7rem;
+        right: -6rem;
+        height: 40.938rem;
+        width: 24rem;
     }
 
     &__logo {
@@ -30,5 +32,6 @@
 
     &__description {
         @include m.text($font-size-base, $line-height-normal, null, $color-slate);
+        width: 20.938rem;
     }
 }
