@@ -5,12 +5,11 @@
     position: relative;
     height: 62.8125rem; // 1005px
     width: 23.4375rem; // 375px
-    margin: $spacing-7xl 0 0 0;
+    margin: $spacing-7xl auto 0;
     background: $color-slate;
 
     &__phone {
-        @include m.absolute(calc($spacing-7xl  * -1), null, null, null);
-        left: 50%;
+        @include m.absolute(calc($spacing-7xl  * -1), null, null, 50%);
         display: inline-block;
         height: 26.875rem; // 430px
         width: 13.0606rem; // 208.97px
@@ -24,6 +23,32 @@
     }
     
     &__card {
-        @include m.absolute(null, null, 0, 0);
+        @include m.absolute(null, 0, 0, null);
+    }
+}
+
+@media(min-width: $breakpoint-tablet) {
+    .content {
+        height: 37.5rem; // 600px
+        width: 42.5rem; // 680px
+        margin: $spacing-9xl auto;
+        border-radius: 0.75rem;
+    
+        &__phone {
+            left: 2.625rem;
+            height: 34.75rem; // 556px
+            width: 16.888rem; // 270.21px
+            transform: none;
+        }
+    
+        &__bg {
+            left: 0;
+            transform: none;
+        }
+        
+        &__card {
+            @include m.absolute(5.375rem, $spacing-5xl, null, null);
+            z-index: 3;
+        }
     }
 }
