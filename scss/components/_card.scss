@@ -31,7 +31,7 @@
         width: 20.9375rem; // 335px
         @include m.flex-center-row($spacing-xs);
         font-weight: $font-bold;
-        font-size: $font-size-lg; // 18px
+        font-size: $font-size-lg;
         border-radius: 0.75rem;
 
         &--ios {
@@ -43,6 +43,24 @@
             margin-top: $spacing-sm;
             background: $color-white;
             color: $color-slate;
+        }
+    }
+}
+
+@media(min-width: $breakpoint-tablet) {
+    .card {
+        height: 39.25rem; //628px
+        width: 22.25rem; //356
+        padding: $spacing-3xl;
+        border-radius: 1rem;
+
+        &__description {
+            font-size: $font-size-lg;
+        }
+    
+        &__btn {
+            width: 16.25rem; // 260px
+
         }
     }
 }
