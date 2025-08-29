@@ -39,6 +39,8 @@
 @media(min-width: $breakpoint-tablet) {
     .header {
         padding: $spacing-5xl $spacing-2xl-5;
+        
+        $center-offset: calc((100% - 42rem) / 2);
     
         &__pattern {
             @include m.absolute(calc(-1 * $spacing-2xl), calc(-1 * $spacing-3xl), null, null);
@@ -53,16 +55,19 @@
     
         &__logo {
             margin-bottom: $spacing-8xl;
+            margin-left: $center-offset;
         }
     
         &__title {
             width: 26rem;
             font-size: $font-size-3xl;
+            margin-left: $center-offset;
         }
     
         &__description {
             font-size: $font-size-lg;
             width: 31.5rem;
+            margin-left: $center-offset;
         }
     }
 }
