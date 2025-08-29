@@ -40,3 +40,26 @@
         }
     }
 }
+
+@media(min-width: $breakpoint-desktop) {
+    .footer {
+        width: 70rem;
+        flex-direction: row;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10.25rem;
+            margin-left: $spacing-8xl;
+        }
+
+        &__content {
+            width: 35rem;
+        }
+    
+        &__social {
+            margin-top: 0;
+        }
+    }
+}
