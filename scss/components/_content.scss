@@ -52,3 +52,23 @@
         }
     }
 }
+
+@media(min-width: $breakpoint-desktop) {
+    .content {
+        width: 70rem; // 1120px
+    
+        &__phone {
+            left: $spacing-7xl;
+            height: 40.125rem; // 642px
+            width: 19.511rem; // 312.17px
+        }
+    
+        &__bg {
+            left: 23rem;
+        }
+        
+        &__card {
+            top: 5.563rem;
+        }
+    }
+}
