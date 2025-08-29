@@ -60,7 +60,22 @@
     
         &__btn {
             width: 16.25rem; // 260px
+        }
+    }
+}
 
+@media(min-width: $breakpoint-desktop) {
+    .card {
+        height: 39.5rem; //632px
+        width: 32rem; //512px
+        padding: $spacing-4xl;
+
+        &__description {
+            font-size: $font-size-xl;
+        }
+    
+        &__btn {
+            width: 25rem; // 400px
         }
     }
 }
