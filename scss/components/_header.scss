@@ -71,3 +71,38 @@
         }
     }
 }
+
+@media(min-width: $breakpoint-desktop) {
+    .header {
+        padding: $spacing-5xl $spacing-2xl-5;
+        overflow: visible;
+        
+        $center-offset: calc((100% - 70rem) / 2);
+    
+        &__pattern {
+            @include m.absolute(0, 0 null, null);
+        }
+    
+        &__bg-image {
+            @include m.absolute(-20rem, 0, null, null);
+            height: auto;
+            width: auto;
+        }
+    
+        &__logo {
+            margin-left: $center-offset;
+        }
+    
+        &__title {
+            width: 58rem;
+            font-size: $font-size-4xl;
+            margin-left: $center-offset;
+        }
+    
+        &__description {
+            font-size: $font-size-xl;
+            width: 46rem;
+            margin-left: $center-offset;
+        }
+    }
+}
