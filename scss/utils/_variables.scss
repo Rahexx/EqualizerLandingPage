@@ -1,0 +1,46 @@
+// Font family
+$font-primary: "IBM Plex Sans", sans-serif;
+
+// Line heights
+$line-height-base: 100%;
+$line-height-tight: 110%;
+$line-height-normal: 150%;
+$line-height-relaxed: 180%;
+
+// Font weights
+$font-bold: 700;
+
+// Font sizes
+$font-size-base: 1rem;      // 16px
+$font-size-lg: 1.125rem;    // 18px
+$font-size-xl: 1.25rem;     // 20px
+$font-size-2xl: 2.5rem;     // 40px
+$font-size-3xl: 4rem;       // 64px
+$font-size-4xl: 5.5rem;     // 88px
+
+// Breakpoints
+$breakpoint-tablet: 48rem;   // 768px
+$breakpoint-desktop: 87.5rem; //1400px
+
+// Spacing
+$spacing-xs: 0.5rem;        // 8px
+$spacing-sm: 1rem;          // 16px
+$spacing-md: 1.25rem;       // 20px
+$spacing-lg: 1.5rem;        // 24px
+$spacing-xl: 2rem;          // 32px
+$spacing-2xl: 2.5rem;       // 40px
+$spacing-2xl-5: 2.75rem;    // 44px
+$spacing-3xl: 3rem;         // 48px
+$spacing-4xl: 3.5rem;       // 56px
+$spacing-5xl: 4rem;         // 64px
+$spacing-6xl: 5rem;         // 80px
+$spacing-7xl: 6.875rem;     // 110px
+$spacing-8xl: 8rem;         // 128px
+$spacing-9xl: 12.5rem;      // 200px
+
+// Colors
+$color-cyan: hsl(177, 68%, 64%);
+$color-orange: hsl(12, 94%, 65%);
+$color-yellow: hsl(33, 100%, 70%);
+$color-white: hsl(20, 33%, 98%);
+$color-slate: hsl(244, 23%, 12%);

@@ -1,0 +1,81 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as m;
+
+.card {
+    height: 39.063rem;
+    width: 23.438rem;
+    padding: $spacing-3xl $spacing-md 0;
+    background: $color-orange;
+
+    &__title {
+        @include m.text($font-size-2xl, $line-height-tight, $font-bold, $color-slate);
+    }
+
+    &__description {
+        margin: $spacing-lg 0 $spacing-2xl;;
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
+    }
+
+    &__price {
+        @include m.flex-row($spacing-sm, center, flex-start);
+        margin-bottom: $spacing-3xl;
+        @include m.text($font-size-xl, $line-height-normal, null, $color-slate);
+
+        &--highlight {
+            @include m.text($font-size-3xl, $line-height-tight, $font-bold, null);
+        }
+    }
+
+    &__btn {
+        height: 4rem; // 64px
+        width: 20.9375rem; // 335px
+        @include m.flex-center-row($spacing-xs);
+        font-weight: $font-bold;
+        font-size: $font-size-lg;
+        border-radius: 0.75rem;
+
+        &--ios {
+            background: $color-slate;
+            color: $color-white;
+        }
+
+        &--android {
+            margin-top: $spacing-sm;
+            background: $color-white;
+            color: $color-slate;
+        }
+    }
+}
+
+@media(min-width: $breakpoint-tablet) {
+    .card {
+        height: 39.25rem; //628px
+        width: 22.25rem; //356
+        padding: $spacing-3xl;
+        border-radius: 1rem;
+
+        &__description {
+            font-size: $font-size-lg;
+        }
+    
+        &__btn {
+            width: 16.25rem; // 260px
+        }
+    }
+}
+
+@media(min-width: $breakpoint-desktop) {
+    .card {
+        height: 39.5rem; //632px
+        width: 32rem; //512px
+        padding: $spacing-4xl;
+
+        &__description {
+            font-size: $font-size-xl;
+        }
+    
+        &__btn {
+            width: 25rem; // 400px
+        }
+    }
+}

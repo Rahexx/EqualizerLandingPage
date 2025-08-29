@@ -1,0 +1,65 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as m;
+
+.footer {
+    margin: $spacing-5xl $spacing-md $spacing-6xl;
+    @include m.flex-column($spacing-xl);
+
+    &__logo {
+        @include m.sized-inline(9.188rem, 2.063rem);
+    }
+
+    &__rights, &__contact {
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
+    }
+
+    &__mail {
+        display: block;
+        @include m.text($font-size-base, $line-height-normal, $font-bold, $color-slate);
+    }
+
+    &__social {
+        margin-top: $spacing-xl;
+        @include m.flex-row($spacing-xl);
+    }
+}
+
+@media(min-width: $breakpoint-tablet) {
+    .footer {
+        margin: $spacing-5xl auto $spacing-6xl;
+        width: 43rem;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        &__social {
+            margin-top: 0;
+        }
+    }
+}
+
+@media(min-width: $breakpoint-desktop) {
+    .footer {
+        width: 70rem;
+        flex-direction: row;
+
+        &__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10.25rem;
+            margin-left: $spacing-8xl;
+        }
+
+        &__content {
+            width: 35rem;
+        }
+    
+        &__social {
+            margin-top: 0;
+        }
+    }
+}

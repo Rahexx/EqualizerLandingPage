@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Frontend Mentor | Equalizer landing page</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body class="container">
+  <header class="header">
+    <picture class="header__background">
+      <source media="(min-width: 1400px)" srcset="./assets/bg-main-desktop.png">
+      <source media="(min-width: 768px)" srcset="./assets/bg-main-tablet.png">
+      <img src="./assets/bg-main-mobile.png" alt="" class="header__bg-image">
+    </picture>
+    <img src="./assets/bg-pattern-1.svg" alt="" class="header__pattern" />
+    <img src="./assets/logo.svg" alt="Company logo" class="header__logo"/>
+    <h1 class="header__title">We make your music sound extraordinary.</h1>
+    <p class="header__description">
+      A system audio equalizer specifically designed for Android and iOS. Freely tune the 
+      way your music sounds with a professional grade parametric EQ & volume mixer. Control 
+      bass, mids, treble, gain control, reverb, and more!
+    </p>
+  </header>
+
+  <main class="content">
+    <img class="content__phone" src="./assets/illustration-app.png" alt="Phone illustration" />
+    <img class="content__bg" src="./assets/bg-pattern-2.svg" alt="" />
+    <section class="content__card card">
+      <h2 class="card__title">Premium EQ</h2>
+      <p class="card__description">
+        Get expert-level control with a robust equalizer, volume mixer, and spatial audio. Take 
+        your listening experience to a whole new level and access all our incredible features!
+      </p>
+      <p class="card__price">
+        <span class="card__price--highlight">$4</span> / month
+      </p>
+      <button class="card__btn card__btn--ios">
+        <img src="./assets/icon-apple.svg" alt="Apple icon" class="card__icon--apple" />
+        iOS Download
+      </button>
+      <button class="card__btn card__btn--android">
+        <img src="./assets/icon-android.svg" alt="Android icon" class="card__icon--android" />
+        Android Download
+      </button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="./assets/logo.svg" alt="Company logo"/>
+    <section class="footer__info">
+      <div class="footer__content">
+        <p class="footer__rights">All rights reserved © Equalizer 2021</p>
+        <p class="footer__contact">
+          Have any problems? Contact us via social media or email us at
+          <a href="mailto:equalizer@example.com" class="footer__mail">equalizer@example.com</a>
+        </p>
+      </div>
+      <ul class="footer__social">
+        <li class="footer__item">
+          <a href="#" class="footer__link" aria-label="Facebook">
+            <img class="footer__icon footer__icon--fb" src="./assets/icon-facebook.svg" alt="Facebook icon" />
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link" aria-label="Instagram">
+            <img class="footer__icon footer__icon--ig" src="./assets/icon-instagram.svg" alt="Instagram icon" />
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link" aria-label="Twitter">
+            <img class="footer__icon footer__icon--twitter" src="./assets/icon-twitter.svg" alt="Twitter icon" />
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+</body>
+</html>

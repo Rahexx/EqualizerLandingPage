@@ -1,0 +1,108 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as m;
+
+.header {
+    padding: $spacing-5xl $spacing-md;
+    position: relative;
+    overflow: hidden;
+
+    &__pattern {
+        display: none;
+    }
+
+    &__bg-image {
+        position: absolute;
+        top: -6rem;
+        right: -6rem;
+        height: 40.938rem;
+        width: 24rem;
+    }
+
+    &__logo {
+        @include m.sized-inline(auto, auto);
+        margin-bottom: $spacing-5xl;
+    }
+
+    &__title {
+        width: 20.938rem;
+        margin-bottom: $spacing-2xl;
+        @include m.text($font-size-2xl, $line-height-base, $font-bold, $color-slate);
+        letter-spacing: -0.063rem;
+    }
+
+    &__description {
+        @include m.text($font-size-base, $line-height-normal, null, $color-slate);
+        width: 20.938rem;
+    }
+}
+
+@media(min-width: $breakpoint-tablet) {
+    .header {
+        padding: $spacing-5xl $spacing-2xl-5;
+        
+        $center-offset: calc((100% - 42rem) / 2);
+    
+        &__pattern {
+            @include m.absolute(calc(-1 * $spacing-2xl), calc(-1 * $spacing-3xl), null, null);
+            display: inline-block;
+        }
+    
+        &__bg-image {
+            @include m.absolute(-6rem, 0, null, null);
+            height: 100%;
+            width: 100%;
+        }
+    
+        &__logo {
+            margin-bottom: $spacing-8xl;
+            margin-left: $center-offset;
+        }
+    
+        &__title {
+            width: 26rem;
+            font-size: $font-size-3xl;
+            margin-left: $center-offset;
+        }
+    
+        &__description {
+            font-size: $font-size-lg;
+            width: 31.5rem;
+            margin-left: $center-offset;
+        }
+    }
+}
+
+@media(min-width: $breakpoint-desktop) {
+    .header {
+        padding: $spacing-5xl $spacing-2xl-5;
+        overflow: visible;
+        
+        $center-offset: calc((100% - 70rem) / 2);
+    
+        &__pattern {
+            @include m.absolute(0, 0 null, null);
+        }
+    
+        &__bg-image {
+            @include m.absolute(-20rem, 0, null, null);
+            height: auto;
+            width: auto;
+        }
+    
+        &__logo {
+            margin-left: $center-offset;
+        }
+    
+        &__title {
+            width: 58rem;
+            font-size: $font-size-4xl;
+            margin-left: $center-offset;
+        }
+    
+        &__description {
+            font-size: $font-size-xl;
+            width: 46rem;
+            margin-left: $center-offset;
+        }
+    }
+}
